@@ -1,0 +1,23 @@
+#counters {
+    .counter {
+        width: 180px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 100%;
+        padding: 20px;
+        margin: 20px auto;
+        .number {
+            font-size: 2.75rem;
+            font-weight: 700;
+        }
+        .title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+   
+}

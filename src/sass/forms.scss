@@ -1,0 +1,65 @@
+input:disabled, 
+select:disabled, 
+textarea:disabled, 
+button:disabled {
+    opacity: 0.3;
+}
+.btn-check {
+    &:checked {
+        + .btn {
+            background-color: $primary;
+            color: $white!important;
+        }
+        
+    }
+}
+
+input {
+    transition: all 0.5s ease-in-out;
+    &:focus {
+        border-color: $primary;
+        box-shadow: none;
+    }
+    &::placeholder {
+        color: darken($light-grey,10);
+    }
+    &.invalid {
+        border-color: $secondary;
+    }
+}
+textarea {
+   border-radius: 20px;
+   transition: all 0.5s ease-in-out;
+    &:focus {
+        border-color: $primary;
+        box-shadow: none;
+    }
+    &::placeholder {
+        color: darken($light-grey,10);
+    }
+    &.invalid {
+        border-color: $secondary;
+    }
+}
+label {
+    color: $dark-grey;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+.form-group:focus-within label {
+    color: $primary;
+}
+label.btn {
+    background-color: $light-grey;
+    color: $dark-grey;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 15px;
+    &:hover {
+        transform: scale(0.99);
+        background-color: $primary!important;
+        color: #fff!important;
+    }
+}

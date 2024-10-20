@@ -1,0 +1,63 @@
+#profile-single {
+    header {
+        background-color: $primary;
+        border-radius: $border-radius;
+        display: flex;
+        justify-content: start;
+        .profile-pic {
+            background-color: #fff;
+            border-radius: 100%;
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+        .details {
+            width: 80%;
+            padding: 10px 20px;
+            .profile_name {
+                display: flex;
+                align-items: center;
+                .profile_mentor {
+                    font-size: 20px;
+                }
+            }
+            .profile_types {
+                font-size: 1.2rem;
+                display: flex;
+                flex-wrap: wrap;
+                .badge {
+                    display: flex;
+                    align-items: center;
+                    padding: 3px 10px 3px 5px;
+                    .type-icon {
+                        width: 25px; 
+                        height: 25px;
+                        &:before {
+                            font-size: 1rem;
+                        }
+                    }
+                   
+                }
+                
+            }
+        }
+       
+    }
+    .profile_block {
+        background-color: #fff;
+        border-radius: $border-radius;
+        padding: 40px 50px;
+        transition: all 0.51s ease;
+        &.bg-primary {
+            h3 {
+                color: $secondary;
+            }
+        }
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0px 25px rgba(0, 0, 0, 0.1);
+
+        }
+    }
+}

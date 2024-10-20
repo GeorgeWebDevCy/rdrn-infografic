@@ -1,0 +1,55 @@
+body,html {
+    overflow-X: hidden;
+}
+
+.swipe {
+    opacity: 0.75;
+    color: $white;
+    animation: swipe 1.5s ease-in-out infinite;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.white-rounded {
+    border-radius: $border-radius;
+    background-color: #fff;
+}
+
+.alert {
+    padding: 15px 25px;
+}
+
+.container-fluid {
+    &.wrapper {
+        background-color: $light-grey;
+    }
+}
+
+#testimonial {
+    p {
+        font-size: 1.2rem;
+    }
+    .testimonial-image {
+        border-radius: 200px;
+        background-size: cover;
+        height: 140px;
+        width: 140px;
+        display: inline-flex;
+        background-position: center;
+        @include media-breakpoint-down(lg) {
+            height: 100px;
+            width: 100px;
+        }
+        @include media-breakpoint-down(sm) {
+            height: 80px;
+            width: 80px;
+        }
+    }
+    strong {
+        color: $secondary;
+        font-weight: 400;
+    }
+}

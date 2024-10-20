@@ -1,0 +1,22 @@
+$primary: #3A5978;
+$secondary: #E9E067;
+$light-grey: #F5F5F5;
+$dark-grey: #525252;
+
+$white: #fff;
+
+$border-radius: 80px;
+
+$tooltip-color: #fff;
+$tooltip-bg: $primary;
+$tooltip-border-width: 1px;
+$tooltip-border-color: #555;
+$tooltip-opacity: 1;
+$tooltip-arrow-width: 0.8rem;
+$tooltip-arrow-height: 0.4rem;
+$tooltip-arrow-color: $primary;
+.tooltip-inner {
+    font-size: 13px; // Set your desired font size
+    border-radius: 15px!important;
+    line-height: 1.1rem;
+}

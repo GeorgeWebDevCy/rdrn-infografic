@@ -1,0 +1,133 @@
+header {
+    
+   .menu-icon {
+        background-color: $secondary;
+        color: $dark-grey;
+        border-radius: $border-radius;
+        width: fit-content;
+        padding: 0px 15px;
+        font-size: 1.5rem;
+   }
+}
+#nav {
+    img.logo {
+        max-width: 100%;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        margin: 0;
+        @include media-breakpoint-down(xl) {
+            justify-content: space-between;
+        }
+        @include media-breakpoint-down(lg) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        li {
+            position: relative; // Added to handle the sub-menu position
+            padding: 10px 13px;
+            @include media-breakpoint-down(xxl) {
+                padding: 10px 9px;
+                font-size: 0.9rem;
+            }
+            a {
+                transition: border-bottom 1s ease;
+                border-bottom: 2px solid $white;
+                padding: 10px 10px;
+                font-size: 1.1rem;
+                @include media-breakpoint-down(lg) {
+                    padding: 10px 0 5px 0;
+                }
+                &:hover {
+                    border-bottom: 2px solid $secondary;
+                }
+            }
+            &.current-menu-item {
+                a {
+                    border-bottom: 2px solid $secondary;
+                }
+            }
+            // Sub-menu styles
+            ul {
+                display: none; 
+                position: absolute;
+                top: 100%;
+                left: 5px;
+                z-index: 999;
+                background-color: $white; // Ensure it matches your design
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+                padding: 20px 0;
+                width:max-content;
+                border-radius: 40px;
+                overflow: hidden;
+                li {
+                    width: 100%;
+                    padding: 0;
+                    a {
+                        display: block;
+                        padding: 10px 40px 10px 35px; // Adjust as needed
+                        border-bottom: none; // Reset border styles if needed
+                        &:hover {
+                            background-color: $primary; // Optional hover effect
+                            color: $white; // Optional hover effect
+                            border: none;
+                        }
+                    }
+                }
+            }
+            &:hover > ul {
+                display: block; // Show sub-menu on hover
+            }
+        }
+    }
+}
+header#internal_header {
+    border-radius: $border-radius;
+    position: relative;
+    width: 100%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: right;
+    padding: 45px 10px;
+    @include media-breakpoint-down(md) {
+        background-size: cover;
+        padding: 20px 25px;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to right, darken($light-grey,5) 50%, rgba(255, 255, 255, 0) 70%);
+        z-index: 1;
+        @include media-breakpoint-down(md) {
+            background: none;
+        }
+    }
+    .content {
+        position: relative;
+        z-index: 2;
+        padding: 25px 35% 26px 0 ;
+        h1 {
+            color: $primary;
+            font-weight: 700;
+        }
+        @include media-breakpoint-down(md) {
+            background-color: rgba($white, 0.85);
+            border-radius: $border-radius;
+            backdrop-filter: blur(10px);
+            padding: 25px 40px;
+            text-align: center;
+        }
+    }
+}
+    

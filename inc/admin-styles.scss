@@ -1,0 +1,8 @@
+.wp-admin {
+    //user pages
+    #your-profile {
+        .user-rich-editing-wrap, .user-syntax-highlighting-wrap, .user-admin-color-wrap, .user-comment-shortcuts-wrap, .user-admin-bar-front-wrap, .user-language-wrap, .user-nickname-wrap, .user-display-name-wrap, .user-url-wrap, #application-passwords-section, .user-description-wrap, .user-profile-picture, h2   {
+            display: none;
+        }
+    }
+}

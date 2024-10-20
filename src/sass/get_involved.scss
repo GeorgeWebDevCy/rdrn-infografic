@@ -1,0 +1,47 @@
+#get-involved {
+    background-color: $light-grey;
+    .get-involved-image {
+        height: 250px;
+        width: 100%;
+        border-radius: $border-radius;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        left: 45px;
+        z-index: 9;
+        @include media-breakpoint-down(lg) {
+            left: auto;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    .get-involved-content {
+        position: relative;
+        left: -45px;
+        background-color: $light-grey;
+        border-radius: $border-radius;
+        padding: 50px 50px 50px 100px;
+        @include media-breakpoint-down(lg) {
+            left: auto;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            padding: 40px;
+
+        }
+    }
+    .get_involved_header {
+        background-color: darken($secondary,10);
+        cursor: pointer;
+    }
+    .get_involved_content {
+        font-size: 0.9rem;
+        .btn {
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+    }
+    .btn {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,141 @@
+#filters {
+    border-radius: $border-radius; 
+    input {
+        border:none;
+        &::placeholder {
+          padding: 0 0 0 7px;
+          color: lighten($dark-grey,30);
+        }
+    }   
+    
+         
+    .select2-container {
+        .select2-selection {
+          border-radius:20px;
+          border: none;
+        }
+        
+        .select2-selection__choice {
+          border-radius:$border-radius;
+          color: $primary;
+          background-color: $light-grey;
+        }
+        .select2-selection__choice__remove {
+          color: $primary;
+          border-radius:$border-radius;
+          border: none;
+          margin: 0 0 0 3px;
+      }
+    }
+    .indv-type {
+      .select2 {
+        width: 100%!important;
+      }
+      
+    }
+    .select2-container--disabled {
+      opacity: 0.5;
+    }
+    .label {
+        font-size: 0.9rem; display: none;
+    }
+    .professional_switch {
+      .form-check-label {
+        padding:3px 0 0 5px;
+      }
+      #professional {
+        border: 1px solid white;
+      }
+    }
+}
+.select2-dropdown {
+  border: 1px solid $primary;
+  border-radius: 10px!important;
+  margin-top: 35px;
+  padding: 10px 0;
+
+  .select2-results {
+    border-radius: 10px;
+
+    .select2-results__options {
+      .select2-results__option--selectable{
+        &.select2-results__option--highlighted {
+          background-color: $primary!important;
+        } 
+      }
+  
+    }
+  }
+}
+#search-results {
+  .user_result {
+    background-color: #fff;
+    border-radius: $border-radius;
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0px 25px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      margin: 4px 0 4px;
+    }
+
+    .profile-pic {
+      background-color: #fff;
+      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-position: center;
+      display: inline-block;
+    }
+    .profile_types {
+      font-size: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .badge {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: fit-content;
+          &:before {
+              content: "\F4DA"; /* Example Unicode for person icon */
+              font-family: 'bootstrap-icons';
+              font-size: 1.2rem;
+          }
+          &.profile-healthcare {
+              &:before {
+                  content: "\F680"; 
+              }
+          }
+          &.profile-industry {
+              &:before {
+                  content: "\F1DD"; 
+              }
+          }
+          &.profile-organisation {
+              &:before {
+                  content: "\F8FE"; 
+              }
+          }
+          &.profile-researcher {
+              &:before {
+                  content: "\F342"; 
+              }
+          }
+          &.profile-funder {
+              &:before {
+                  content: "\F247"; 
+              }
+          }
+          
+      }
+  }
+    
+  }
+}

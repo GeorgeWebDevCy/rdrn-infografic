@@ -1,0 +1,10 @@
+<?php
+include_once('acf-options.php');
+include_once('acf-homepage.php');
+include_once('acf-users.php');
+include_once('acf-collaboration-topics.php');
+include_once('acf-research-interests.php');
+include_once('acf-profiles.php');
+include_once('acf-members-area.php');
+include_once('acf-why-join-main.php');
+include_once('acf-why-join-single.php');

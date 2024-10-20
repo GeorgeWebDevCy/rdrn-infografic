@@ -1,0 +1,53 @@
+.type-icon {
+    display: inline-flex;
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    background-color: $primary;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: $secondary;
+        color: $primary;
+    }
+    &:before {
+        content: "\F4DA";  
+        font-family: 'bootstrap-icons';
+        margin: 3px;
+        font-size: 1.2rem;
+        display: inline-flex;
+        justify-content: center;
+        
+    }
+    &.profile-healthcare {
+        &:before {
+            content: "\F680"; 
+        }
+    }
+    &.profile-industry {
+        &:before {
+            content: "\F1DD"; 
+        }
+    }
+    &.profile-organisation {
+        &:before {
+            content: "\F8FE"; 
+        }
+    }
+    &.profile-researcher {
+        &:before {
+            content: "\F342"; 
+        }
+    }
+    &.profile-funder {
+        &:before {
+            content: "\F247"; 
+        }
+    }
+    
+}

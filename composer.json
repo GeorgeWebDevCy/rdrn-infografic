@@ -1,0 +1,26 @@
+{
+    "name": "redwebcambridge/redweb-theme",
+    "require": {
+        "wpengine/advanced-custom-fields-pro": "*",
+        "composer/installers": "*"
+    },
+    "config": {
+        "vendor-dir": "vendor",
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "../../mu-plugins/{$name}/": ["wpengine/advanced-custom-fields-pro"],
+            "../../plugins/{$name}/": ["type:wordpress-plugin"],
+            "../../themes/{$name}/": ["type:wordpress-theme"]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://connect.advancedcustomfields.com"
+        }
+    ]
+}

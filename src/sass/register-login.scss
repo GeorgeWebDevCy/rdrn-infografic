@@ -1,0 +1,171 @@
+#regModal {
+    .modal-content {
+        border-radius: $border-radius;
+        overflow: hidden;
+        .left {
+            background-image: url('../images/AdobeStock_329574748_Preview copy.webp');
+            background-position: center;
+            background-size: cover;
+            min-height: 85vh;
+            h1 {
+                font-weight: 700;
+            }
+            .btn {
+                border-color: $white;
+                color: $white;
+            }
+        }
+        #registration_form {
+            .step {
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+            h2.question {
+                color: $primary;
+                font-size: 2rem;
+                width: 100%;
+                padding:0;
+                background-color: $white;
+            }
+            
+            
+           
+            .alert {
+                padding: 4px 20px;
+            }
+            .profile-picture-wrapper  {
+                .profile-picture {
+                    position: relative; 
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%; 
+                    overflow: hidden;
+                    img {
+                        cursor: pointer;
+                        transition: opacity .3s ease-in-out;
+                        position: absolute; 
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%; 
+                        height: 100%; 
+                        object-fit: cover;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+                .upload {
+                    cursor: pointer;
+                    color: $primary;
+                    transition: color .5s ease-in-out;
+                    &:hover {
+                        color: $dark-grey;
+                    }
+                }
+                
+            }
+            .password {
+                input, button {
+                    display: inline-block;
+                }
+                input {
+                    //width: 86%;
+                }
+                button {
+                    background-color:$light-grey;
+                    //border: 1px solid $dark-grey;
+                    margin-left: 90%;
+                    margin-top: -63px;
+                    padding: 4px 7px;
+                    position: relative;
+                }
+            }
+            .img-rules {
+                font-size: 0.8rem;
+                span {
+                    display: flex;
+                    margin-top: 5px;
+                    i {
+                        color: $primary;
+                        padding-right: 5px;
+                    }
+                }
+               
+            }
+            #research-selected {
+                .btn {
+                    &:hover {
+                        transform: scale(1);
+                    }
+                    i {
+                        &:hover {
+                            color: #eee;
+                        }
+                    }
+                }
+            }
+            #summary, #about {
+                border-radius: 20px;
+            }
+            .aff_org_details.additional_org .form-label { 
+                display: none;
+            }
+            .additional_org {
+                border-top: 1px solid $light-grey;
+                margin-top: 5px;
+            }
+            .add-another-org .max-5, .upload-remove{
+                font-size: 0.8rem;
+                font-weight: 700;
+                cursor: pointer!important;
+            }
+            .org_logo_container {
+                .org-logo-file {
+                    max-height: 100px;
+                }
+            }
+            .upload-file-label {
+                padding-top: 20px;
+            }
+            .suggest_condition_wrapper {
+                .btn {
+                    &:hover {
+                        transform: scale(1);
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+    }    
+}
+#loginModal {
+    .modal-content {
+        border-radius: $border-radius;
+        label {
+            width: 100%;
+        }
+        input {
+            padding: 10px 20px;
+        }
+        .recap {
+            
+            .g-recaptcha {
+                width: 100%;
+                padding-top: 10px;
+                div:first-child {
+                    display: inline-block;
+
+                }
+               
+            }
+        }
+        #resendverification {
+            cursor: pointer;
+        }
+    }
+}

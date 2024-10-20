@@ -1,0 +1,5 @@
+.wp-admin #your-profile .user-rich-editing-wrap, .wp-admin #your-profile .user-syntax-highlighting-wrap, .wp-admin #your-profile .user-admin-color-wrap, .wp-admin #your-profile .user-comment-shortcuts-wrap, .wp-admin #your-profile .user-admin-bar-front-wrap, .wp-admin #your-profile .user-language-wrap, .wp-admin #your-profile .user-nickname-wrap, .wp-admin #your-profile .user-display-name-wrap, .wp-admin #your-profile .user-url-wrap, .wp-admin #your-profile #application-passwords-section, .wp-admin #your-profile .user-description-wrap, .wp-admin #your-profile .user-profile-picture, .wp-admin #your-profile h2 {
+  display: none;
+}
+
+/*# sourceMappingURL=admin-styles.css.map */

@@ -1,0 +1,81 @@
+.btn {
+    border-radius: $border-radius;
+    transition: all .5s ease-in-out;
+    &.btn-primary {
+        color: $white;
+    }
+    &.btn-secondary {
+        background-color: transparent;
+        color: $primary;
+        border-color: $primary;
+    }
+    &:hover {
+       transform: scale(0.9);
+    }
+}
+
+a.rdrn_button {
+    font-weight: 700;
+    text-transform:uppercase;
+    font-size: 0.9rem;
+    padding: 7px 1px;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left: 10px;
+    cursor: pointer;
+    i {
+        padding: 0 4px 0 0;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 0;
+        padding: 0;
+        i {
+            font-size: 1.5rem;
+        }
+    }
+    &.login {
+        color: $primary;
+        background-color: $white;
+        &:hover, &:focus, &:active {
+            background-color: $secondary;
+            color: $primary;
+        }
+    }
+    &.register {
+        color: $white;
+        border-color: $white;
+        border: 1px solid $white;
+        &:hover, &:focus, &:active {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+}
+
+.wrapper {
+    a.rdrn_button {
+        margin-left: 0px;
+        display: inline-block;
+        &.login {
+            color: $primary;
+            background-color: $secondary;
+            &:hover, &:focus, &:active {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+        &.register {
+            color: $white;
+            border-color: $white;
+            border: 1px solid $white;
+            background-color: $primary;
+            &:hover, &:focus, &:active {
+                background-color: $secondary;
+                color: $primary;
+            }
+        }
+    }
+    
+}

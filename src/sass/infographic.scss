@@ -1,0 +1,114 @@
+#infographic {
+    .container {
+        @include media-breakpoint-down(lg) {
+            flex-wrap: wrap;
+            .mobile-arrows {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .manual-column-group {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+        .group {
+            border-radius: 10px;
+            transition: all 1s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        .bi-arrow-repeat {
+            animation: infograpic_spin infinite 10s linear;
+            background-color: $white;
+            color: $primary;
+            font-size: 1.5rem;
+            position: relative;
+            transform: scale(2);
+            width:30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            z-index: 9;
+        }
+    }
+    .manual-column-center {
+        width: 500px;
+        .arrows {
+            font-size: 1.8rem;
+            .bi {
+                padding: 37px 0;
+
+            }
+        }
+        .online-platform {
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 4px 0;
+        }
+        .content-container  {
+            border-radius: $border-radius;
+            width: 100%;
+        }
+        .content {
+            border-radius: 62px;
+            width: 90%;
+            display: inline-block;
+            height: 180px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            .logo {
+                width: 90%;
+            }
+            .group-content {
+                width: 90%;
+                @include media-breakpoint-down(xl) {
+                   font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    .manual-column-icons {
+        width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+            justify-content: center;
+        }
+        .svg-container{
+            width: 100px;
+            padding: 10px 10px 0 0;
+            @include media-breakpoint-down(xl) {
+                width: 80px;
+            }
+            .svg-icon {
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    #background {
+                        circle {
+                            transition: all 0.5s ease-in-out;
+                            fill: $secondary;
+                        }
+                    }
+                    #icon {
+                        path {
+                           transition: all 0.2s ease;
+                           fill: $primary;
+                        }
+                    }
+
+                }    
+            }
+        }
+
+    }
+}

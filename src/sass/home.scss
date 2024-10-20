@@ -1,0 +1,220 @@
+.home {
+    #hero {
+        .swiper-wrapper {
+            height: 500px;
+            @include media-breakpoint-down(md) {
+                height: 400px;
+            }
+            .swiper-slide {
+                display: flex;
+                width: 100%;
+                opacity: 0.2;
+                transition: opacity 1s ease-in-out;
+                height: 100%;
+                &.swiper-slide-active {
+                    opacity: 1;
+                }
+                .slide-inner {
+                    background-size: cover;
+                    background-position: center;
+                    padding: 120px 55% 120px 100px;
+                    color: $dark-grey;
+                    border-radius: $border-radius;
+                    overflow: hidden;
+                    width: 100%;
+                    h1 {
+                        font-weight: 300;
+                        font-size: 2.2rem;
+                    }
+                    @include media-breakpoint-down(xl) {
+                        padding: 100px 60% 100px 80px;
+                        h1 {
+                            font-size: 1.9rem;
+                        }
+                    }
+                    @include media-breakpoint-down(lg) {
+                        background-position: center right;
+                        padding: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        @include media-breakpoint-down(md) {
+                            padding: 8px;
+                        }
+                        .content-container {
+                            background-color: rgba($white, 0.85);
+                            border-radius: $border-radius;
+                            backdrop-filter: blur(10px);
+                            padding: 25px 40px;
+                            text-align: center;
+                            h1 {
+                                color: $primary;
+                                font-weight: 700;
+                                font-size: 1rem;
+                            }
+                            @include media-breakpoint-down(md) {
+                                padding: 25px 22px;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+        .swiper-button-prev, .swiper-button-next {
+            color: $dark-grey;
+            opacity: 0.5;
+            position: relative;
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+        .swiper-button-prev {
+            top: -250px;
+            left: -50px;
+            @include media-breakpoint-down(md) {
+                top: -190px;
+            }
+        }
+        .swiper-button-next {
+            top: -272px;
+            left: 1316px;
+            @include media-breakpoint-down(xxl) {
+                left: 1135px;
+            }
+            @include media-breakpoint-down(xl) {
+                left: 955px;
+            }
+            @include media-breakpoint-down(lg) {
+                left: 715px;
+            }
+            @include media-breakpoint-down(md) {
+                left: 530px;
+                top: -215px;
+            }
+        }
+        .swiper-pagination {
+            bottom: 205px;
+            @include media-breakpoint-down(xl) {
+                bottom: 125px;
+            }
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+            span {
+                width: 18px;
+                height: 18px;
+                background-color: #fff;
+                opacity: 0.75;
+                &.swiper-pagination-bullet-active {
+                    background-color: $primary;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    #home_cards {
+        .card {
+            background-color: $light-grey;
+            border-radius: $border-radius;
+            border: none;
+            .icon {
+                color: $primary;
+                font-size: 3.5rem;
+            }
+            .content {
+                padding: 0 30px 30px 30px;
+                color: $dark-grey;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                h3 {
+                    font-weight: 700;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    
+    #community {
+         
+    }
+    #news-slider {
+        background-color: $light-grey;
+        .news-slide-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .news_swiper {
+            overflow-x: hidden;
+            .swiper-wrapper {
+                .swiper-slide {
+                    display: flex;
+                    flex-direction: column;
+                    .thumbnail {
+                        width: 100%;
+                        height: 230px;
+                        background-size: cover;
+                        background-position: center;
+                        border-top-left-radius: $border-radius;
+                        border-top-right-radius: $border-radius;
+        
+                    }
+                    .content {
+                        background-color: $white;
+                        min-height: 50%;
+                    }
+                    h2 {
+                        font-size: 1.2rem;
+                        padding: 25px 20px 10px 20px;
+                    }
+                    p {
+                        padding: 0 20px 1px 20px;
+                        font-size: 1rem;
+                        color: $dark-grey;
+                    }
+                    a.more_link {
+                        background-color: $primary;
+                        color: $white;
+                        width: 100%;
+                        display: block;
+                        text-align: center;
+                        font-size: 1.25rem;
+                        padding: 20px 0;
+                        transition: all 1s ease-in-out;
+                        border-bottom-left-radius: $border-radius;
+                        border-bottom-right-radius: $border-radius;
+                        &:hover {
+                            background-color: $primary;
+                        }
+                    }
+                }
+            
+            }
+        }
+       
+        .swiper-button-prev, .swiper-button-next {
+            color: $dark-grey;
+            opacity: 0.5;
+            position: relative;
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+        .swiper-button-prev {
+            order: -1;
+        }
+    }
+
+    #get-involved {
+        li {
+            font-size: 1.1rem;
+        }
+    }
+    
+}

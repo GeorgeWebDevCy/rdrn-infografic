@@ -1,0 +1,34 @@
+#members_area {
+    background-color: $light-grey;
+    .left-members-area {
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border-radius: 100%;
+            background-size: cover;
+            margin-bottom: 10px;
+        }
+        .user-side-menu  {
+            a {
+                width: 100%;
+                display: inline-block;
+            }
+            &.members-menu {
+                //font-size: 1.1rem;
+                a {
+                    background: $primary;
+                    border-radius: $border-radius;
+                    color: #fff;
+                    padding: 10px 15px;
+                    margin: 5px 0;
+                    transition: all .5s ease-in-out;
+                    &:hover {
+                        background: $secondary;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
