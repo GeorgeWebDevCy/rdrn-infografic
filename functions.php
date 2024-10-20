@@ -358,4 +358,31 @@ function create_acf_fields_for_infographic() {
         ));
     }
 }
+
+function interactive_infographic_shortcode() {
+  ob_start(); ?>
+  <div id="infographic-container" style="position: relative;">
+      <img id="image1" class="infographic-image" src="<?php echo get_template_directory_uri(); ?>/images/image1.jpg" alt="Infographic Step 1">
+      <img id="image2" class="infographic-image hidden" src="<?php echo get_template_directory_uri(); ?>/images/image2.jpg" alt="Infographic Step 2">
+      <img id="image3" class="infographic-image hidden" src="<?php echo get_template_directory_uri(); ?>/images/image3.jpg" alt="Infographic Step 3">
+      <img id="image4" class="infographic-image hidden" src="<?php echo get_template_directory_uri(); ?>/images/image4.jpg" alt="Infographic Step 4">
+      <img id="image5" class="infographic-image hidden" src="<?php echo get_template_directory_uri(); ?>/images/image5.jpg" alt="Infographic Step 5">
+
+      <button class="arrow-area" onclick="showNextImage()">Next</button>
+  </div>
+  <?php
+  return ob_get_clean();
+}
+add_shortcode('interactive_infographic', 'interactive_infographic_shortcode');
+
+function enqueue_infographic_scripts() {
+  // Enqueue CSS
+  wp_enqueue_style('infographic-css', get_template_directory_uri() . '/inc//css/infographic.css');
+
+  // Enqueue JavaScript
+  wp_enqueue_script('infographic-js', get_template_directory_uri() . '/inc/js/infographic.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_infographic_scripts');
+
+
 /*************************************************************************************** GeorgeWebDevCY End***************************************************************** */

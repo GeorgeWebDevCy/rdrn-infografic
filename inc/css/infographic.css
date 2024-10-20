@@ -1,0 +1,39 @@
+.infographic-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.arrow-area {
+    position: absolute;
+    top: 45%; /* Adjust to match the arrow's location */
+    right: 5%; /* Adjust to match the arrow's location */
+    width: 8%; /* Width of the clickable area */
+    height: 8%; /* Height of the clickable area */
+    background: transparent; /* Make it invisible */
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .arrow-area {
+        top: 40%;
+        right: 8%;
+        width: 10%;
+        height: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrow-area {
+        top: 35%;
+        right: 10%;
+        width: 12%;
+        height: 12%;
+    }
+}
